@@ -6,7 +6,7 @@ on:
     - master
 
 env:
-  IMAGE_NAME: troysnyk/snyk-juice-shop:linux
+  IMAGE_NAME: troysnyk/snyk-juice-shop
 
 jobs:
   docker:
@@ -32,6 +32,7 @@ jobs:
           uses: docker/metadata-action@v5
           with:
             images: ${{ env.IMAGE_NAME }}
+            tags: linux
 
         - name: Build and push
           uses: docker/build-push-action@v6
