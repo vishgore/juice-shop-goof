@@ -38,7 +38,7 @@ jobs:
           with:
             push: true
             provenance: mode=max
-            ags: ${{ steps.meta.outputs.tags }}
+            tags: ${{ steps.meta.outputs.tags }}
 
         - uses: snyk/actions/setup@master
         - name: Snyk Container Monitor 
